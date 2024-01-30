@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--* Nav-->
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Pixabay</a>
+        <!--* this buttom to make the box list to right side-------------------->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--? this Div with Collapes with not include the Logo. Items will be compressed when the screen is minimized -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Photos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Natur</a></li>
+                <li><a class="dropdown-item" href="#">Countries</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Love</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--?-----------------------------------------Big Picture-------------------------------->
+    <div class="card text-bg-dark">
+      <img
+        src="https://cdn.pixabay.com/animation/2022/12/07/11/45/11-45-20-62_512.gif"
+        id="pic"
+      />
+      <div class="card-img-overlay">
+        <div class="container text-center flex-flow: row;" id="top">
+          <div class="row justify-content-md-center">
+            <!--?---------------------- Option------------------------->
+            <div class="grid text-center" style="width: 12%">
+              <select
+                class="form-select"
+                id="orderinput"
+                aria-label="Default select example"
+              >
+                <option selected id="option1" value="popular">Popular</option>
+                <option id="option2" value="latest">Latest</option>
+              </select>
+            </div>
+            <!--?---------------------Search----------------------------------------->
+            <div class="grid text-center" style="width: 30%">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                  id="search-input"
+                />
+                <button
+                  class="btn btn-outline-dark"
+                  type="submit"
+                  id="search-button"
+                >
+                  Search
+                </button>
+              </form>
+            </div>
+            <!--?------------------Button--------------------->
+            <div class="grid text-center" style="width: 10%">
+              <button
+                class="btn btn-outline-dark"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#multiCollapseExample2"
+                aria-expanded="false"
+                aria-controls="multiCollapseExample2"
+              >
+                FIlter
+              </button>
+              <!--?  -------------------------radio----Orientation-------------------------------->
+              <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body" id="card-body">
+                  <div class="radio">
+                    <div class="form-check form-check-inline" id="radio">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio0"
+                        value=""
+                      />
+                      <label class="form-check-label" for="inlineRadio0"
+                        >All</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio1"
+                        value="horizontal"
+                      />
+                      <label class="form-check-label" for="inlineRadio1"
+                        >Horizontal</label
+                      >
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="inlineRadioOptions"
+                        id="inlineRadio2"
+                        value="vertical"
+                      />
+                      <label class="form-check-label" for="inlineRadio2"
+                        >Vertical</label
+                      >
+                    </div>
+                  </div>
+                  
+                  <!--?Color------------------------Filter images by color----------------------------------->
+
+                  <div class="col-color">
+                    <h6>Color</h6>
+                    <div class="color-form">
+                      <div class="grid-colors">
+                        <label class="color-select reset">
+                          <input type="radio" name="color" value="" />all</label
+                        >
+
+                        <label class="color-select reset red checked">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="red"
+                          />red</label
+                        >
+
+                        <label class="color-select reset">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="blue"
+                          />blue</label
+                        >
+
+                        <label class="color-select reset red checked">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="yellow"
+                          />yellow</label
+                        >
+                        <!-- Force next columns to break to new line -->
+                        <div class="w-100"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <a id="clear-filter" href="#" class="badge badge-primary"
+                    >Clean Filter</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--?----------------------------container header------------------------------>
+    <div class="container header" id="header">
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        value="backgrounds"
+        name="category"
+      >
+        Backgrounds
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        value="nature"
+        name="category"
+      >
+        nature
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        value="science"
+        name="category"
+      >
+        science
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        value="food"
+        name="category"
+      >
+        food
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        value="education"
+        name="category"
+      >
+        education
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        value="feelings"
+        name="category"
+      >
+        feelings
+      </button>
+    </div>
+    <!--* Main container-->
+    <div class="body-container">
+    <div class="container" >
+      <div class="row row-cols-1 row-cols-md-3 g-4" id="cards-container">
+        <div class="col" id="box-con">
+          <div class="card h-100">
+            <!-- Modal -->
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div
+            class="modal-header"
+            class="base--ceysk radiogroupContainer--QFIcG"
+            id="downlowd"
+          >
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="background: #0d6efd"
+                ;
+              >
+                Download
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <input
+                    class="form-check-input me-1"
+                    type="radio"
+                    name="listGroupRadio"
+                    value=""
+                    id="firstRadio"
+                    checked
+                  />
+                  <label class="form-check-label" for="firstRadio"
+                    >640×427</label
+                  >
+                </li>
+                <li>
+                  <input
+                    class="form-check-input me-1"
+                    type="radio"
+                    name="listGroupRadio"
+                    value=""
+                    id="secondRadio"
+                  />
+                  <label class="form-check-label" for="secondRadio"
+                    >1280×853</label
+                  >
+                </li>
+                <li>
+                  <input
+                    class="form-check-input me-1"
+                    type="radio"
+                    name="listGroupRadio"
+                    value=""
+                    id="thirdRadio"
+                  />
+                  <label class="form-check-label" for="thirdRadio"
+                    >1920×1280</label
+                  >
+                </li>
+                <li>
+                  <input
+                    class="form-check-input me-1"
+                    type="radio"
+                    name="listGroupRadio"
+                    value=""
+                    id="thirdRadio"
+                  />
+                  <label class="form-check-label" for="thirdRadio"
+                    >6527×4352</label
+                  >
+                </li>
+                <li>
+                  <button type="button" class="btn btn-primary" id="downlowd">
+                    <a class="link-opacity-10" href="#"></a>Download
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="gallery-photo">hello</div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
